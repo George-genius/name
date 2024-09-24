@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>nothing</title>
+    <style>
+        #myVideo {
+            display: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showText()"  title="it has something in the point">As I say</button>
+    <button onclick="toggleVideo()" title="you can click the word to">.</button>
+    <video id="myVideo" controls>
+        <source src="https://cdn.microsoftstore.com.cn/media/product_long_description/video/Uhw0-00000video/001_pBOHPB5r_plpherovideo/TaQcBp-yellow-zucchinis-color-hero.mp4" type="video/mp4">
+    </video>
+    <p id="displayText"></p>
+    <script>
+        function toggleVideo() {
+            var video = document.getElementById("myVideo");
+            if (video.style.display === "none") {
+                video.style.display = "block";
+            } else {
+                video.style.display = "none";
+            }
+        }
+        function showText() {
+            document.getElementById("displayText").innerHTML = "such fool are you belive me.";
+        }
+    </script>
+</body>
+</html>
